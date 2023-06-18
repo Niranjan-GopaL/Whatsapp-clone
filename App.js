@@ -7,7 +7,7 @@ import ChatListItem from './src/components/ChatListItem';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world </Text>
+      <Text>Hello world  </Text>
       <StatusBar style="auto" />
       <ChatListItem />
     </View>
