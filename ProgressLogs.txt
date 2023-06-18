@@ -10,3 +10,13 @@ HOW TO CREATE A REACT-NATIVE APP in my setup --------------------FINALLY !!!----
 
 
 
+------------------------ PROGRESS LOGS ----------------------------------------------
+
+1) Initialised project
+
+2) Working on ChatListItem in src/components/ChatListItem
+   that's where I stopped 
+
+I HAVE A PICTURE OF CAT AS PFP WITH LOTS OF TEXT elems
+
+   poosible problem ahead 
