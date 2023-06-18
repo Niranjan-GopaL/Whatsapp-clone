@@ -1,0 +1,9 @@
+HOW TO CREATE A REACT-NATIVE APP in my setup -----------
+
+- npx create-expo-app ./
+- yarn
+- yarn add expo
+
+- npx expo start --tunnel
+
+------------------------------------------------------------ THAT'S IT
