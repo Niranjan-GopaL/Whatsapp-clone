@@ -1,3 +1,0 @@
-PROGRESS LOGS -------------------------------------------------------------------------------------------------
-
-1)  Search for an android emulator and an ios emulator.
