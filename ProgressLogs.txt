@@ -10,6 +10,19 @@ HOW TO CREATE A REACT-NATIVE APP in my setup --------------------FINALLY !!!----
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------ PROGRESS LOGS ----------------------------------------------
 
 1) Initialised project
@@ -20,3 +33,5 @@ HOW TO CREATE A REACT-NATIVE APP in my setup --------------------FINALLY !!!----
 I HAVE A PICTURE OF CAT AS PFP WITH LOTS OF TEXT elems
 
    poosible problem ahead 
+
+3) Whatsapp Asset folder is THERE IN THE APP DEV dir
