@@ -51,3 +51,29 @@ I HAVE A PICTURE OF CAT AS PFP WITH LOTS OF TEXT elems
    poosible problem ahead 
 
 3) Whatsapp Asset folder is THERE IN THE APP DEV dir
+
+4) ChatListItem UI done
+
+5) Working on sending Props part. Making rendering DYNAMIC
+
+basic structure of a chat
+
+const chat = {
+  id: "1",
+  user: {
+    image:
+      "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg",
+    name: "Lukas",
+  },
+  lastMessage: {
+    text: "Oke",
+    createdAt: "07:30",
+  },
+};
+
+
+
+NOW YOU HAVE THE ABILITY TO PASS IN PROPS TO A COMPONENT SO THAT IT RENDERS DYNAMIC DATA
+
+
+6) 

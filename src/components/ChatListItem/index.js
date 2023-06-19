@@ -2,29 +2,48 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import dayjs from "dayjs";
 
-const ChatListItem = () => {
+const ChatListItem = ({chat}) => {
+
+  // console.log(chat) //<----------NICE
+
   return (
 
     // makes children appear in a single row
     <View style={styles.container}>
-      <Image source={{ uri : 'https://media.istockphoto.com/id/1426330507/photo/cute-cat-is-looking-at-the-camera-beautiful-kitten-rests-on-light-fur-cat-close-up-on-a-white.jpg?s=1024x1024&w=is&k=20&c=_tjqK7G265NPfET_h-KMOU4v1x9hWAGXwBxaGK6BoDs='  }} style={styles.image}   />
+      <Image source={{ uri : chat.user.image  }} style={styles.image}   />
 
       <View style={styles.content} >
         <View style={styles.row} >
 
-          <Text  style={styles.name}  numberOfLines={1}>Niranjan</Text>
-          <Text>2:30 AM</Text>
+          <Text  style={styles.name}  numberOfLines={1}> {chat.user.name}     </Text>
+          <Text> {chat.lastMessage.createdAt} </Text>
           {/* <Text style={styles.subTitle}>{dayjs(chat.lastMessage.createdAt).fromNow(true)}</Text> */}
 
         </View>
 
           {/* numberOfLines={1} is SUCH A LIFE SAVER. if text is really long it will be displayed only in one line and and put 3 dots after it */}
-          <Text style={styles.subTitle} numberOfLines={1} >World is interesting  </Text>
+          <Text style={styles.subTitle} numberOfLines={1} > {chat.lastMessage.text}  </Text>
       </View>
 
     </View>
   );
 };
+
+
+// USE FOR REFERENCE
+
+// const chat = {
+//   id: "1",
+//   user: {
+//     image:
+//       "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg",
+//     name: "Lukas",
+//   },
+//   lastMessage: {
+//     text: "Oke",
+//     createdAt: "07:30",
+//   },
+// };
 
 
 const styles = StyleSheet.create({
@@ -44,7 +63,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginRight: 10,
   },
-  
+
   content: {
 
     // SETTING BACKGROUND COLORS ARE A GOOD WAY TO UNDERSTAND WHO IT IS BEING RENDERED
