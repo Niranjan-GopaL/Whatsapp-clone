@@ -10,7 +10,15 @@ export default function App() {
       <StatusBar style="auto" />
 
       <ChatListItem />
-      
+      <ChatListItem />
+      <ChatListItem />
+      <ChatListItem />
+      <ChatListItem />
+      <ChatListItem />
+      <ChatListItem />
+      <ChatListItem />
+      <ChatListItem />
+
     </View>
   );
 }
