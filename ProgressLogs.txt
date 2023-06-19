@@ -1,3 +1,7 @@
+
+                        REMEMBER    !!!!
+
+
 HOW TO CREATE A REACT-NATIVE APP in my setup --------------------FINALLY !!!--------
 
 - npx create-expo-app ./
@@ -5,10 +9,22 @@ HOW TO CREATE A REACT-NATIVE APP in my setup --------------------FINALLY !!!----
 - yarn add expo
 
 - npx expo start --tunnel
-
 ------------------------------------------------------------ THAT'S IT --------------
 
+Expo build trouble
 
+Solution 1:
+
+   -  Make sure both in same wifi. 
+   -  npx expo start (it'll complain) 
+   -  nest
+                     ( Kinda like refresh )
+
+Solution 2:
+
+   - yarn add expo (reinstalling dependencies idk y)
+   - nest
+            
 
 
 
