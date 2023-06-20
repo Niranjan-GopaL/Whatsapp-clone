@@ -8,13 +8,10 @@ dayjs.extend(relativeTime);  // relative line is like "3 days ago, 4 hours  ago,
 const Message = ({message}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.message}> 
-        {message.text}
-       </Text>
 
-      <Text style={styles.time}> 
-        {message.createdAt}
-       </Text>
+      <Text style={styles.message}> {message.text} </Text>
+      <Text style={styles.time}> {dayjs(message.createdAt).fromNow(true)} </Text>
+
     </View>
   );
 };
@@ -25,7 +22,7 @@ const styles = StyleSheet.create({
     container: {
       margin: 5,
       padding: 10,
-      borderRadius: 10,
+      borderRadius: 40,
       maxWidth: "80%",
   
     // Shadows
@@ -40,7 +37,9 @@ const styles = StyleSheet.create({
       elevation: 1,
     },
 
-    message: {},
+    message: {
+        color: 'red'
+    },
 
     time: {
       alignSelf: "flex-end",
