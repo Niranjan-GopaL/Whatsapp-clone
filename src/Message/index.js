@@ -6,8 +6,20 @@ dayjs.extend(relativeTime);  // relative line is like "3 days ago, 4 hours  ago,
 
 
 const Message = ({message}) => {
+
+
+  const isMyMessage = message.user.id == 'u1'
+
   return (
-    <View style={styles.container}>
+    <View style={
+      [
+          styles.container, // whenever we want to render more than one styles we render them through lists
+          {
+            backgroundColor: isMyMessage ? '#DCF8C5' : 'white',
+            alignSelf: isMyMessage ? 'flex-end' : 'flex-start'
+          }
+      ]
+    }>
 
       <Text style={styles.message}> {message.text} </Text>
       <Text style={styles.time}> {dayjs(message.createdAt).fromNow(true)} </Text>
@@ -22,10 +34,19 @@ const styles = StyleSheet.create({
     container: {
       margin: 5,
       padding: 10,
-      borderRadius: 40,
+
+      // uncomment one and see what happens. 
+      // This is the property that will differentiate message that we send and they send. 
+      // alignSelf: 'flex-start',
+      // alignSelf: 'flex-end',
+
+      borderRadius: 10,
+
+      // this makes the messages only take 80% of the row space.
+      //  gives it a left aligned effect
       maxWidth: "80%",
   
-    // Shadows
+      // Shadows
       shadowColor: '#000',
       shadowOffset: {
         width: 0,
@@ -38,7 +59,7 @@ const styles = StyleSheet.create({
     },
 
     message: {
-        color: 'red'
+        // color: 'red'
     },
 
     time: {
