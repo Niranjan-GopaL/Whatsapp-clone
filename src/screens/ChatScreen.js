@@ -1,22 +1,26 @@
-import ChatListItem from "../components/ChatListItem";
+import { View, Text, ImageBackground,FlatList } from "react-native";
+import bg from '../../assets/images/BG.png'
+import Message from "../Message";
+import messages from '../../assets/data/messages.json'
+
+/*
+
+            You want an image to stay in the background of any component. "sticky"
+
+            ->  <ImageBackground> OUT OF THE BOX IMPLEMENTS IT !!!!!!!!!!!  
+
+*/
 
 
-const chat = {
-    id: "1",
-    user: {
-      image:
-        "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg",
-      name: "Niranjan",
-    },
-    lastMessage: {
-      text: "World is interesting, Don't die cuz of few failures",
-      createdAt: "2:30 AM",
-    },
-  };
-  
-
-const ChatsScreen = () => {
-  return <ChatListItem chat={chat} />;
+const ChatScreen = () => {
+  return (
+    <ImageBackground source={bg}>
+        <FlatList 
+        
+        renderItem={{}}
+        />
+    </ImageBackground>
+  );
 };
 
-export default ChatsScreen;
+export default ChatScreen;
