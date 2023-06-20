@@ -11,8 +11,6 @@ export default function App() {
 
       {/* <ChatsScreen /> */}
       <ChatScreen />
-      <ChatScreen />
-      <ChatScreen />
 
     </View>
   );

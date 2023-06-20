@@ -87,3 +87,24 @@ NOW YOU HAVE THE ABILITY TO PASS IN PROPS TO A COMPONENT SO THAT IT RENDERS DYNA
 
 8) Message component is used forrendering each message
 
+
+                      VERY USEFULL AND RELEVENT SKILL AND 
+
+
+How to render Messges depending on condition
+
+
+  const isMyMessage = message.user.id == 'u1'
+
+    <View style={
+      [
+          styles.container, // whenever we want to render more than one styles we render them through lists
+          {
+            backgroundColor: isMyMessage ? 'green' : 'white',
+            alignSelf: isMyMessage ? 'flex-end' : 'flex-start'
+          }
+      ]
+    }>
+
+
+9) Expo Vector Icons is where you want to go for all icon stuff 
