@@ -2,6 +2,7 @@ import { View, Text, ImageBackground,FlatList,StyleSheet } from "react-native";
 import bg from '../../assets/images/BG.png'
 import Message from "../Message";
 import messages from '../../assets/data/messages.json'
+import InputBox from "../InputBox";
 
 /*
 
@@ -25,6 +26,8 @@ const ChatScreen = () => {
         inverted
         />
 
+        <InputBox /> 
+        
     </ImageBackground>
   );
 };
