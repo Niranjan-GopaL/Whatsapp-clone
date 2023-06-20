@@ -1,6 +1,10 @@
 
 import { View, Text, StyleSheet, Image } from "react-native";
 import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);  // relative line is like "3 days ago, 4 hours  ago, 10 mins ago etc"
+
+
 
 const ChatListItem = ({chat}) => {
 
@@ -16,8 +20,10 @@ const ChatListItem = ({chat}) => {
         <View style={styles.row} >
 
           <Text  style={styles.name}  numberOfLines={1}> {chat.user.name}     </Text>
-          <Text> {chat.lastMessage.createdAt} </Text>
-          {/* <Text style={styles.subTitle}>{dayjs(chat.lastMessage.createdAt).fromNow(true)}</Text> */}
+
+          {/* if you pass true => "ago" won't be there */}
+          {/* <Text >{dayjs(chat.lastMessage.createdAt).fromNow(true)}</Text> */}
+          <Text >{dayjs(chat.lastMessage.createdAt).fromNow()}</Text>
 
         </View>
 
