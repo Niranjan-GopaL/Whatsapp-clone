@@ -76,4 +76,13 @@ const chat = {
 NOW YOU HAVE THE ABILITY TO PASS IN PROPS TO A COMPONENT SO THAT IT RENDERS DYNAMIC DATA
 
 
-6) 
+6) Working on ChatsScreen UI - 4
+
+    Now just have a static data from Assets
+    Later we'll get all that from backend
+
+7) ChatScreen UI - 5 (ITS SINGULAR! lol)
+
+<ImageBackground> is amazing.
+
+8) Message component is used forrendering each message
