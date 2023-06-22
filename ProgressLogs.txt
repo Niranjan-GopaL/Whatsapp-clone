@@ -192,13 +192,13 @@ dependencies :-
 
 ---------------::   STACK NAVIGATOR  ::------------------------------
 
-        we use Stack navigator :-
+                we use Stack navigator :-
 
-    - each screen is added to a stack when user triggers it
-    - and when the user goes back that screen is popped off
-    - there are some transitioning animation
-    - behind the scenes the actual Stack Data structure stores a 
-      lot of stuff including the path, and other metadata
+            - each screen is added to a stack when user triggers it
+            - and when the user goes back that screen is popped off
+            - there are some transitioning animation
+            - behind the scenes the actual Stack Data structure stores a 
+              lot of stuff including the path, and other metadata
 
 
 
@@ -213,3 +213,11 @@ ChatListItem/index.js
 
                              ||.........................................||
     <Pressable onPress={() => navigation.navigate("Chat", {id:chat.id}) } style={styles.container}>
+
+
+Navigation/Navigator.js
+
+  // everytime user presses on ChatListItem, we were sending some information to the ChatScreen component.
+  // THIS IS HOW WE ACCESS THEM
+  const route = useRoute();
+  console.log(route)

@@ -1,6 +1,9 @@
 import { ImageBackground,FlatList,StyleSheet,KeyboardAvoidingView } from "react-native";
+import { useNavigation,useRoute } from "@react-navigation/native";
+import { useEffect } from "react";
+
 import bg from '../../assets/images/BG.png'
-import Message from "../Message";
+import Message from "../Message/Message";
 import messages from '../../assets/data/messages.json'
 import InputBox from "../InputBox";
 
@@ -14,6 +17,23 @@ import InputBox from "../InputBox";
 
 
 const ChatScreen = () => {
+
+  // everytime user presses on ChatListItem, we were sending some information to the ChatScreen component.
+  // THIS IS HOW WE ACCESS THEM
+  const route = useRoute();
+  console.log(route) // <------------- WE GET DATA FROM OTHER ROUTES
+
+
+  // we set the title of the page using useNavigation
+  const navigation = useNavigation();
+  navigation.setOptions({title: route.params.name})
+  
+  
+  useEffect(() => {
+    navigation.setOptions({title: route.params.name});
+  } ,[route.params.name]);
+
+  
   return (
     
     // SO in iOS Whenevver the keyboard comes up, it'll hinder the InputTexBox
