@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground,FlatList,StyleSheet } from "react-native";
+import { ImageBackground,FlatList,StyleSheet,KeyboardAvoidingView } from "react-native";
 import bg from '../../assets/images/BG.png'
 import Message from "../Message";
 import messages from '../../assets/data/messages.json'
@@ -15,7 +15,15 @@ import InputBox from "../InputBox";
 
 const ChatScreen = () => {
   return (
-    <ImageBackground  style={styles.container} source={bg}>
+    
+    // SO in iOS Whenevver the keyboard comes up, it'll hinder the InputTexBox
+    //  By using this component it won't happen (SCREEN IS PUSHED UP)
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    style={styles.bg}
+    >
+
+    <ImageBackground  style={styles.bg} source={bg}>
 
         <FlatList 
         data={messages}
@@ -29,6 +37,8 @@ const ChatScreen = () => {
         <InputBox /> 
         
     </ImageBackground>
+    </KeyboardAvoidingView>
+    
   );
 };
 
@@ -36,10 +46,14 @@ export default ChatScreen;
 
 const styles = StyleSheet.create({
 
-    container:{
-        flex:1
-    }
-
-
+    // container:{
+    //     flex:1
+    // },
+    bg: {
+      flex: 1,
+    },
+    list: {
+      padding: 10,
+    },
 
 })
