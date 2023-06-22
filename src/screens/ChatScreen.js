@@ -23,17 +23,23 @@ const ChatScreen = () => {
   const route = useRoute();
   console.log(route) // <------------- WE GET DATA FROM OTHER ROUTES
 
+/*
+     we set the title of the page using useNavigation
 
-  // we set the title of the page using useNavigation
+const navigation = useNavigation();
+navigation.setOptions({title: route.params.name}) 
+
+this works fine in andorid but in iOS causes issue, SO :-
+
+*/
+
+// THIS IS THE REAL WAY TO DO IT
   const navigation = useNavigation();
-  navigation.setOptions({title: route.params.name})
-  
-  
   useEffect(() => {
     navigation.setOptions({title: route.params.name});
-  } ,[route.params.name]);
+  } ,[route.params]);
 
-  
+
   return (
     
     // SO in iOS Whenevver the keyboard comes up, it'll hinder the InputTexBox
