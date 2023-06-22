@@ -54,6 +54,11 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderColor: 'lightgray',
     borderWidth: StyleSheet.hairlineWidth,
+
+
+    // THIS WAS SOOOOO FUCKING FUNNNN !!!!!
+    fontSize: 50
+
   },
   send: {
     backgroundColor: 'royalblue',
