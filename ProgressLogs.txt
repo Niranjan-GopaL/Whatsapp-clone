@@ -153,3 +153,32 @@ const InputBox = () => {
     )
 
 }
+
+
+12) For navigation we use react navigation. Expo is working on their new navigation library 
+
+
+because react native is very modularised we'll need to install the stuff that we want only:-
+
+
+
+
+npx expo install @react-navigation/native @react-navigation/native-stack @react-navigation/bottom-tabs react-native-screens react-native-safe-area-context
+                                                   |
+                                                   |
+                                                   |
+                                                   |
+                                                  \ /
+                                                   |
+yarn add @react-navigation/native @react-navigation/native-stack @react-navigation/bottom-tabs react-native-screens@~3.20.0 react-native-safe-area-context@4.5.0
+
+
+(cuz this is how you install using yarn)
+
+
+dependencies :-
+        @react-navigation/native
+        @react-navigation/native-stack
+        @react-navigation/bottom-tabs
+        react-native-screens@~3.20.0
+        react-native-safe-area-context@4.5.0
