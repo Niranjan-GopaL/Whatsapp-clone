@@ -109,7 +109,47 @@ How to render Messges depending on condition
 
 9) Expo Vector Icons is where you want to go for all icon stuff 
 
-10) 
+10)IOS EXCLUSIVE ==>
 
-                                          IOS EXCLUSIVE ( )
-                                          
+                  // src/screens/ChatScreen.js
+
+                  return (
+                    <KeyboardAvoidingView
+                      behavior={Platform.OS === "ios" ? "padding" : "height"}
+                      style={styles.bg}
+                    >
+                      <ImageBackground source={bg} style={styles.bg}>
+                      ...
+                      </ImageBackground>
+                    </KeyboardAvoidingView>
+                  )
+
+
+11)  Binding the even of "onPress" to the function onSend :=
+     Hooks associated 
+
+
+const InputBox = () => {
+
+    
+ ---->>   const [newMessage, setNewMessage] = useState('');
+
+
+
+---->>    const onSend = () => {
+
+          // IT'S CONSOLE.WARN (you'll see it in screen, kinda like alert() )
+          console.warn('Sending a new message: ', newMessage);
+
+          setNewMessage('');
+        };
+
+    return (
+    ...
+
+---->>    <MaterialIcons onPress={onSend} style={styles.send} name="send" size={16} color="white" />
+      
+    ... 
+    )
+
+}

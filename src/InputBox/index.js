@@ -7,12 +7,26 @@ import { SafeAreaView } from 'react-native';
 
 
 const InputBox = () => {
+
+  // HOW TO GET THE data from user >> States !!!
+  // Whenver a state variable changes, react RE-RENDERS THE ENTIRE PAGE!!
   const [newMessage, setNewMessage] = useState('');
+  // we update using the setter value - setNewMessage
+
+
 
   const onSend = () => {
-    console.warn('Sending a new message: ', newMessage);
 
+    // IT'S CONSOLE.WARN
+    console.warn('Sending a new message: ', newMessage);
+    console.log('Sending a new message: ', newMessage);
+
+    // this is used to update the value of newMessage to empty string 
+    // so now after we click send ->  console.warns -> the field is changed to '' 
     setNewMessage('');
+
+    // try uncommenting this and see what happens
+    // setNewMessage('THIS IS THE NEW VAL');
   };
 
   return (
@@ -30,6 +44,7 @@ const InputBox = () => {
       />
 
       {/* Icon */}
+      {/* onPress we'll send the data to the function "send data". we can bind the event "pressing send" to a function */}
       <MaterialIcons onPress={onSend} style={styles.send} name="send" size={16} color="white" />
       
     </SafeAreaView>
