@@ -182,3 +182,20 @@ dependencies :-
         @react-navigation/bottom-tabs
         react-native-screens@~3.20.0
         react-native-safe-area-context@4.5.0
+
+
+
+13) I found this very useful
+    find . -name "*Zone.Identifier" -type f -delete
+
+
+
+---------------::   STACK NAVIGATOR  ::------------------------------
+
+        we use Stack navigator :-
+
+    - each screen is added to a stack when user triggers it
+    - and when the user goes back that screen is popped off
+    - there are some transitioning animation
+    - behind the scenes the actual Stack Data structure stores a 
+      lot of stuff including the path, and other metadata
