@@ -1,7 +1,8 @@
-import ChatScreen from "../screens/ChatScreen";
 import {NavigationContainer} from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import ChatScreen from "../screens/ChatScreen";
+import ChatsScreen from "../screens/ChatsScreen";
 
 
 /*
@@ -21,6 +22,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
 
+// Stack OBJECT!!!
 const Stack = createNativeStackNavigator();
 
 
@@ -32,14 +34,15 @@ const Navigator = () => {
     <NavigationContainer>
 
       <Stack.Navigator 
-        initialRouteName="Chat" // this is used to set initial screen that needs to be displayed
+        // initialRouteName="Chat" // this is used to set initial screen that needs to be displayed
         screenOptions={{ headerStyle: { backgroundColor: 'whitesmoke' } 
       }}>
 
         {/* requires two props :- name and component                   */}
-        <Stack.Screen name="Home" component={MainTabNavigator} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Home" component={MainTabNavigator} options={{ headerShown: false }} /> */}
+        <Stack.Screen name="Chats" component={ChatsScreen} />
         <Stack.Screen name="Chat" component={ChatScreen} />
-        <Stack.Screen name="Contacts" component={ContactsScreen} />
+        {/* <Stack.Screen name="Contacts" component={ContactsScreen} /> */}
 
       </Stack.Navigator>
 

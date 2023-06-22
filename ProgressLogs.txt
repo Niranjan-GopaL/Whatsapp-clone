@@ -199,3 +199,17 @@ dependencies :-
     - there are some transitioning animation
     - behind the scenes the actual Stack Data structure stores a 
       lot of stuff including the path, and other metadata
+
+
+
+
+ChatListItem/index.js
+
+     Pressable is just "View that has onPress prop" , view does not have onPress, cuz its only a "View" 
+     We need to send some data to the Chat Screen based on which Chat the user clicked
+     In this component, at least for now we are querying and getting all the data (about each of the users,etc )
+     we could send this data to the Chat screen but :-
+                    WE DO NOT SEND SUCH LARGE AMOUNTS OF DATA THROUGH NAVIGATORS
+
+                             ||.........................................||
+    <Pressable onPress={() => navigation.navigate("Chat", {id:chat.id}) } style={styles.container}>

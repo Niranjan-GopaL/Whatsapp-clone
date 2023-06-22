@@ -1,5 +1,6 @@
+import { View, Text, StyleSheet, Image, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-import { View, Text, StyleSheet, Image } from "react-native";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);  // relative line is like "3 days ago, 4 hours  ago, 10 mins ago etc"
@@ -9,11 +10,23 @@ dayjs.extend(relativeTime);  // relative line is like "3 days ago, 4 hours  ago,
 const ChatListItem = ({chat}) => {
 
   // console.log(chat) //<----------NICE
+  const navigation = useNavigation();
 
   return (
 
-    // makes children appear in a single row
-    <View style={styles.container}>
+    // this style makes children appear in a single row
+    // <Pressable onPress={() => console.warn("A CHATLIST ITEM HAS BEEN PRESSED") } style={styles.container}>
+
+
+    
+    // Pressable is just "View that has onPress prop" , view does not have onPress, cuz its only a "View" 
+    // We need to send some data to the Chat Screen based on which Chat the user clicked
+    // In this component, at least for now we are querying and getting all the data (about each of the users,etc )
+    // we could send this data to the Chat screen but :-
+    //                WE DO NOT SEND SUCH LARGE AMOUNTS OF DATA THROUGH NAVIGATORS
+    // 
+    // so we just send the id and name, and Chat screen will seperately query for the data from S3 
+    <Pressable onPress={() => navigation.navigate("Chat", {id:chat.id,name : chat.user.name}) } style={styles.container}>
       <Image source={{ uri : chat.user.image  }} style={styles.image}   />
 
       <View style={styles.content} >
@@ -31,7 +44,7 @@ const ChatListItem = ({chat}) => {
           <Text style={styles.subTitle} numberOfLines={1} > {chat.lastMessage.text}  </Text>
       </View>
 
-    </View>
+    </Pressable>
   );
 };
 
