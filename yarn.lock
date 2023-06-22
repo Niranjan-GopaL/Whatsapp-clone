@@ -6471,6 +6471,11 @@ through@2:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==
 
+timejs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/timejs/-/timejs-1.0.0.tgz#19b2e18b62a96a7caafbda2913deba73ab781996"
+  integrity sha512-oeFUAnmJZI4lDAui13kOcnW2dBsKv5j2fWH4Xo59r6U272wCv5xfYCpMxsiR8SZnAFvy8L+yLBooWqS0b5yNPg==
+
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"

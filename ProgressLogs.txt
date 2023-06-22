@@ -108,3 +108,8 @@ How to render Messges depending on condition
 
 
 9) Expo Vector Icons is where you want to go for all icon stuff 
+
+10) 
+
+                                          IOS EXCLUSIVE ( )
+                                          
