@@ -1,6 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { Amplify } from 'aws-amplify';
+
+
+Amplify.configure()
+
+
 import Navigator from './src/Navigation/Navigator';
 import ChatScreen from './src/screens/ChatScreen';
 import ChatsScreen from './src/screens/ChatsScreen';
