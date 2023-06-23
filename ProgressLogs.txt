@@ -241,3 +241,9 @@ ctrl + alt + b ==> Toggle secondary sidebar
 
 AWS AMPLIFY SECRET ACCESS KEY of uer Niranjan-GopaL :== Je5XHiRFBzVea8yqovlCAVm1lYI+HG/aePY8NIpy
 AWS AMPLIFY ACCESS KEY :==  AKIAULA4FGM6OJAD32Q7
+
+
+amplify pull --appId drj9nc3663cn9 --envName staging  (Pulling stuff from AWS AMplufy auth)
+
+
+npm install aws-amplify aws-amplify-react-native amazon-cognito-identity-js @react-native-community/netinfo @react-native-async-storage/async-storage
