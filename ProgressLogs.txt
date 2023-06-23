@@ -224,3 +224,20 @@ Navigation/Navigator.js
 
 
 14) MainTabNavigator is the bottomTabNavigator. Finished Implementing
+
+
+
+ctrl + shift + f ,  ctrl + shift + f  ==> Find in Files
+ctrl + alt + b ==> Toggle secondary sidebar 
+
+
+18) Amplify is just like Firebase. It gives tonnes of stuff to work with.
+
+- Authentication
+- Data Storage
+- APIs
+
+
+
+AWS AMPLIFY SECRET ACCESS KEY of uer Niranjan-GopaL :== Je5XHiRFBzVea8yqovlCAVm1lYI+HG/aePY8NIpy
+AWS AMPLIFY ACCESS KEY :==  AKIAULA4FGM6OJAD32Q7
