@@ -1,5 +1,3 @@
-// src/screens/NotImplementedScreen.js
-
 import { View, Text, Image, StyleSheet } from "react-native";
 
 const NotImplementedScreen = () => {

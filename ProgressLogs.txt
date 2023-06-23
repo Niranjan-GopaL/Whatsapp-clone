@@ -221,3 +221,6 @@ Navigation/Navigator.js
   // THIS IS HOW WE ACCESS THEM
   const route = useRoute();
   console.log(route)
+
+
+14) MainTabNavigator is the bottomTabNavigator. Finished Implementing
